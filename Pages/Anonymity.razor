@@ -1,0 +1,132 @@
+﻿@page "/anonymity"
+@inject HttpClient Http
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>🕵️ Névtelenségi Statisztikák</h3>
+    <a href="/" class="btn btn-outline-secondary">← Vissza</a>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <label class="form-label">Válassz évet:</label>
+        <select class="form-select shadow-sm" @onchange="OnYearChanged">
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+        </select>
+    </div>
+</div>
+
+@if (currentStat == null)
+{
+    <div class="text-center mt-5"><div class="spinner-border text-primary"></div></div>
+}
+else
+{
+    var anonPercent = (double)currentStat.Anonymous / currentStat.Total * 100;
+    var namedPercent = (double)currentStat.Named / currentStat.Total * 100;
+
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-5 d-flex justify-content-center mb-4 mb-md-0">
+            <div class="pie-chart shadow" style="background: conic-gradient(#e74a3b 0% @(anonPercent)%, #4e73df @(anonPercent)% 100%);">
+                <div class="pie-hole">
+                    <span class="fs-4 fw-bold text-muted">@currentStat.Year</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Részletes adatok</h5>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="legend-box me-3 shadow-sm" style="background-color: #e74a3b;"></div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">Anonim vizsgázók</h6>
+                            <small class="text-muted">Adatvédelem miatt rejtett név</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold fs-5">@anonPercent.ToString("0.0")%</div>
+                            <div class="text-muted small">@currentStat.Anonymous fő</div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex align-items-center">
+                        <div class="legend-box me-3 shadow-sm" style="background-color: #4e73df;"></div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">Névvel szereplők</h6>
+                            <small class="text-muted">Nyilvános eredmények</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold fs-5">@namedPercent.ToString("0.0")%</div>
+                            <div class="text-muted small">@currentStat.Named fő</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .pie-chart {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* A közepén lévő lyuk (fánk diagram effekt) */
+    .pie-hole {
+        width: 180px;
+        height: 180px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .legend-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+</style>
+
+@code {
+    private List<AnonymityStat>? allStats;
+    private AnonymityStat? currentStat;
+    private int selectedYear = 2025;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            allStats = await Http.GetFromJsonAsync<List<AnonymityStat>>("anonymity.json");
+            FilterData();
+        }
+        catch (Exception ex) { Console.WriteLine(ex.Message); }
+    }
+
+    private void OnYearChanged(ChangeEventArgs e)
+    {
+        selectedYear = int.Parse(e.Value!.ToString()!);
+        FilterData();
+    }
+
+    private void FilterData()
+    {
+        if (allStats != null)
+        {
+            currentStat = allStats.FirstOrDefault(s => s.Year == selectedYear);
+        }
+    }
+}

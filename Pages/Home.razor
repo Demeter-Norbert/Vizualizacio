@@ -1,118 +1,79 @@
 ﻿@page "/"
-@inject HttpClient Http
+@inject NavigationManager NavManager
 
-<PageTitle>Rezidensvizsga Eredmények</PageTitle>
+<PageTitle>Rezidens Dashboard</PageTitle>
 
-<h1>Rezidensvizsga Megyei Átlagok</h1>
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-primary">Rezidensvizsga Elemző</h1>
+    <p class="lead text-muted">Válassz egy kategóriát az adatok vizualizációjához</p>
+</div>
 
-<div class="row mb-3">
+<div class="row g-4 mb-4 justify-content-center">
     <div class="col-md-4">
-        <label>Válassz évet:</label>
-        <select class="form-select" @onchange="OnYearChanged">
-            <option value="2025">2025</option>
-            <option value="2024">2024</option>
-            <option value="2023">2023</option>
-        </select>
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center" @onclick='() => NavigateTo("averages")'>
+            <div class="card-body">
+                <div class="dashboard-icon">📊</div>
+                <h3 class="card-title h5">Megyei Átlagok</h3>
+                <p class="card-text text-muted small">Melyik megye teljesített a legjobban?</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center" @onclick='() => NavigateTo("participation")'>
+            <div class="card-body">
+                <div class="dashboard-icon">👥</div>
+                <h3 class="card-title h5">Részvételi Arány</h3>
+                <p class="card-text text-muted small">Hány vizsgázó volt az egyes megyékben?</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center" @onclick='() => NavigateTo("distribution")'>
+            <div class="card-body">
+                <div class="dashboard-icon">📈</div>
+                <h3 class="card-title h5">Pontszám Eloszlás</h3>
+                <p class="card-text text-muted small">Milyen volt a vizsga nehézsége?</p>
+            </div>
+        </div>
     </div>
 </div>
 
-@if (filteredData == null)
-{
-    <p><em>Adatok betöltése...</em></p>
-}
-else
-{
-    <div class="card mb-4">
-        <div class="card-header">
-            Átlagos Pontszámok (@selectedYear)
-        </div>
-        <div class="card-body" style="overflow-x: auto;">
-            <svg width="@(filteredData.Count * 40 + 50)" height="400">
-                <line x1="40" y1="10" x2="40" y2="350" stroke="black" />
-                <text x="10" y="20" font-size="10">950</text>
-                <text x="10" y="175" font-size="10">500</text>
-                <text x="10" y="350" font-size="10">0</text>
-
-                @for (int i = 0; i < filteredData.Count; i++)
-                {
-                    var item = filteredData[i];
-                    var height = (item.Score / 1000.0) * 340.0; // Skálázás 1000 ponthoz
-                    var y = 350 - height;
-                    var x = 50 + (i * 40);
-
-                    <g>
-                        <rect x="@x" y="@y" width="30" height="@height" fill="#007bff" />
-                        <text x="@(x + 15)" y="370" font-size="10" text-anchor="middle" transform="rotate(0, @(x + 15), 370)">@item.County</text>
-                        <text x="@(x + 15)" y="@(y - 5)" font-size="9" text-anchor="middle" fill="black">@Math.Round(item.Score)</text>
-                    </g>
-                }
-            </svg>
+<div class="row g-4 mb-4 justify-content-center">
+    <div class="col-md-5">
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center" @onclick='() => NavigateTo("anonymity")'>
+            <div class="card-body">
+                <div class="dashboard-icon">🕵️</div>
+                <h3 class="card-title h5">Névtelenség</h3>
+                <p class="card-text text-muted small">Hányan kérték az adataik titkosítását?</p>
+            </div>
         </div>
     </div>
+    <div class="col-md-5">
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center" @onclick='() => NavigateTo("growth")'>
+            <div class="card-body">
+                <div class="dashboard-icon">🚀</div>
+                <h3 class="card-title h5">Éves Növekedés</h3>
+                <p class="card-text text-muted small">Hogyan változott a vizsgázók száma?</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Megye</th>
-                <th>Átlagos Pontszám (Scor Simplu)</th>
-                <th>Év</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in filteredData)
-            {
-                <tr>
-                    <td>@item.County</td>
-                    <td>@item.Score.ToString("F2")</td>
-                    <td>@item.Year</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<div class="row g-4 justify-content-center">
+    <div class="col-md-6">
+        <div class="card h-100 shadow-sm dashboard-card p-4 text-center border-warning" @onclick='() => NavigateTo("absentees")'>
+            <div class="card-body">
+                <div class="dashboard-icon text-warning">🚫</div>
+                <h3 class="card-title h5">Hiányzások</h3>
+                <p class="card-text text-muted small">Regisztráltak vs. Megjelentek aránya évenként.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
-    private List<CountyScore>? allData;
-    private List<CountyScore>? filteredData;
-    private int selectedYear = 2025;
-
-    protected override async Task OnInitializedAsync()
+    private void NavigateTo(string page)
     {
-        try
-        {
-            allData = await Http.GetFromJsonAsync<List<CountyScore>>("data.json");
-            FilterData();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Hiba az adatok betöltésekor: {ex.Message}");
-        }
-    }
-
-    private void OnYearChanged(ChangeEventArgs e)
-    {
-        if (int.TryParse(e.Value?.ToString(), out int year))
-        {
-            selectedYear = year;
-            FilterData();
-        }
-    }
-
-    private void FilterData()
-    {
-        if (allData != null)
-        {
-            filteredData = allData
-                .Where(d => d.Year == selectedYear)
-                .OrderByDescending(d => d.Score)
-                .ToList();
-        }
-    }
-
-    public class CountyScore
-    {
-        public string County { get; set; } = "";
-        public double Score { get; set; }
-        public int Year { get; set; }
+        NavManager.NavigateTo(page);
     }
 }

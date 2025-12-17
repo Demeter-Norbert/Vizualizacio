@@ -1,0 +1,129 @@
+﻿@page "/averages"
+@inject HttpClient Http
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>📊 Megyei Átlagok (Hőtérkép)</h3>
+    <a href="/" class="btn btn-outline-secondary">← Vissza</a>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <label class="form-label">Válassz évet:</label>
+        <select class="form-select shadow-sm" @onchange="OnYearChanged">
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+        </select>
+    </div>
+    <div class="col-md-9 d-flex align-items-end">
+        <div class="d-flex align-items-center gap-2 small text-muted">
+            <span>Jelmagyarázat:</span>
+            <span class="badge" style="background-color: #e74a3b">Alacsonyabb</span>
+            <span style="background: linear-gradient(90deg, #e74a3b, #f6c23e, #1cc88a); width: 100px; height: 10px; border-radius: 5px;"></span>
+            <span class="badge" style="background-color: #1cc88a">Magasabb</span>
+        </div>
+    </div>
+</div>
+
+@if (displayData == null)
+{
+    <div class="text-center mt-5"><div class="spinner-border text-primary"></div></div>
+}
+else
+{
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+        @{
+            // Színskála számításához a minimum és maximum értékek
+            var minScore = displayData.Min(d => d.Score);
+            var maxScore = displayData.Max(d => d.Score);
+        }
+
+        @foreach (var item in displayData)
+        {
+            // Színkalkuláció: 0% -> Piros, 50% -> Sárga, 100% -> Zöld
+            var ratio = (item.Score - minScore) / (maxScore - minScore);
+            // Biztosítjuk, hogy 0 és 1 között legyen
+            ratio = Math.Max(0, Math.Min(1, ratio));
+
+            // HSL színkód: Hue 0 (piros) - 120 (zöld)
+            // Kicsit eltoljuk, hogy ne legyen teljesen piros/zöld (pl. 10-140)
+            var hue = 10 + (ratio * 130);
+            var bgColor = $"hsl({hue}, 75%, 45%)";
+
+            <div class="county-card shadow-sm" style="background-color: @bgColor">
+                <div class="county-code">@item.County</div>
+                <div class="county-score">@item.Score.ToString("0.0")</div>
+                <div class="progress mt-2" style="height: 4px; background: rgba(255,255,255,0.3);">
+                    <div class="progress-bar" style="width: @(ratio * 100)%; background: white;"></div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<style>
+    .county-card {
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: default;
+        position: relative;
+        padding: 10px;
+    }
+
+        .county-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+            z-index: 10;
+        }
+
+    .county-code {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .county-score {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+</style>
+
+@code {
+    private StatisticsData? allStats;
+    private List<CountyMetric>? displayData;
+    private int selectedYear = 2025;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            allStats = await Http.GetFromJsonAsync<StatisticsData>("statistics.json");
+            FilterData();
+        }
+        catch (Exception ex) { Console.WriteLine(ex.Message); }
+    }
+
+    private void OnYearChanged(ChangeEventArgs e)
+    {
+        selectedYear = int.Parse(e.Value!.ToString()!);
+        FilterData();
+    }
+
+    private void FilterData()
+    {
+        if (allStats != null)
+        {
+            displayData = allStats.Averages
+                .Where(d => d.Year == selectedYear)
+                .OrderByDescending(d => d.Score) // A legmagasabb pontszámú legyen elől
+                .ToList();
+        }
+    }
+}

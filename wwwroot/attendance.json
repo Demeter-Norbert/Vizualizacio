@@ -1,0 +1,20 @@
+[
+  {
+    "Year": 2023,
+    "Present": 5636,
+    "Absent": 97,
+    "TotalRegistered": 5733
+  },
+  {
+    "Year": 2024,
+    "Present": 6129,
+    "Absent": 114,
+    "TotalRegistered": 6243
+  },
+  {
+    "Year": 2025,
+    "Present": 6832,
+    "Absent": 124,
+    "TotalRegistered": 6956
+  }
+]

@@ -1,0 +1,194 @@
+﻿@page "/growth"
+@inject HttpClient Http
+
+<div class="d-flex justify-content-between align-items-center mb-5">
+    <h3>🚀 Éves Növekedési Trendek</h3>
+    <a href="/" class="btn btn-outline-secondary">← Vissza</a>
+</div>
+
+@if (stats == null)
+{
+    <div class="text-center mt-5"><div class="spinner-border text-primary"></div></div>
+}
+else
+{
+    <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-0">
+
+            @for (int i = 0; i < stats.Count; i++)
+            {
+                var item = stats[i];
+                var prevItem = i > 0 ? stats[i - 1] : null;
+
+                // --- ÖSSZEKÖTŐ NYÍL (Ha nem az első elem) ---
+                if (prevItem != null)
+                {
+                    var diff = item.Total - prevItem.Total;
+                    var percent = ((double)diff / prevItem.Total * 100);
+                    var isPositive = diff >= 0;
+
+                    <div class="connector d-flex flex-column align-items-center justify-content-center">
+                        <div class="line"></div>
+
+                        <div class="badge-bubble shadow-sm @(isPositive ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger")">
+                            <span class="fw-bold fs-6">@(isPositive ? "+" : "")@percent.ToString("0.0")%</span>
+                            <div style="font-size: 0.75rem;">(@(isPositive ? "+" : "")@diff fő)</div>
+                        </div>
+                    </div>
+                }
+
+                // --- ÉV KÁRTYA ---
+                <div class="stat-card shadow hover-effect">
+                    <div class="stat-year text-muted">@item.Year</div>
+                    <div class="stat-value text-primary">@item.Total.ToString("N0")</div>
+                    <div class="stat-label">Résztvevő</div>
+
+                    <div class="stat-icon">📅</div>
+                </div>
+            }
+
+        </div>
+
+        <div class="text-center mt-5 text-muted">
+            <p class="mb-0">A folyamatábra a vizsgázók létszámának éves változását szemlélteti.</p>
+        </div>
+    </div>
+}
+
+<style>
+    /* Kártya stílus */
+    .stat-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        width: 220px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        border: 1px solid #f0f0f0;
+    }
+
+    .hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+        transition: all 0.3s ease;
+    }
+
+    .stat-year {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .stat-icon {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        font-size: 6rem;
+        opacity: 0.05;
+        transform: rotate(-20deg);
+        pointer-events: none;
+    }
+
+    /* Összekötő elem (Connector) */
+    .connector {
+        position: relative;
+        width: 150px; /* Távolság a kártyák között */
+        height: 100px;
+    }
+
+    /* A vízszintes vonal */
+    .line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #e9ecef;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    /* A buborék középen */
+    .badge-bubble {
+        z-index: 3;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        text-align: center;
+        background: white;
+        border: 2px solid white;
+        min-width: 100px;
+        animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* Reszponzivitás: mobilon függőleges legyen */
+    @@media (max-width: 768px) {
+        .d-flex.flex-md-row {
+            flex-direction: column !important;
+        }
+
+        .connector {
+            width: 100px;
+            height: 100px; /* Magasság mobilon */
+        }
+
+        .line {
+            width: 4px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @@keyframes popIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+@code {
+    private List<AnonymityStat>? stats;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var data = await Http.GetFromJsonAsync<List<AnonymityStat>>("anonymity.json");
+            if (data != null)
+            {
+                stats = data.OrderBy(x => x.Year).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

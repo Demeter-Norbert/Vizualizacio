@@ -1,0 +1,1613 @@
+{
+  "averages": [
+    {
+      "County": "AB",
+      "Score": 653.37,
+      "Year": 2023
+    },
+    {
+      "County": "AG",
+      "Score": 690.13,
+      "Year": 2023
+    },
+    {
+      "County": "AR",
+      "Score": 582.19,
+      "Year": 2023
+    },
+    {
+      "County": "B",
+      "Score": 677.9,
+      "Year": 2023
+    },
+    {
+      "County": "BC",
+      "Score": 717.48,
+      "Year": 2023
+    },
+    {
+      "County": "BH",
+      "Score": 631.72,
+      "Year": 2023
+    },
+    {
+      "County": "BN",
+      "Score": 716.56,
+      "Year": 2023
+    },
+    {
+      "County": "BR",
+      "Score": 649.77,
+      "Year": 2023
+    },
+    {
+      "County": "BT",
+      "Score": 693.17,
+      "Year": 2023
+    },
+    {
+      "County": "BV",
+      "Score": 646.31,
+      "Year": 2023
+    },
+    {
+      "County": "BZ",
+      "Score": 709.48,
+      "Year": 2023
+    },
+    {
+      "County": "CJ",
+      "Score": 724.35,
+      "Year": 2023
+    },
+    {
+      "County": "CL",
+      "Score": 707.33,
+      "Year": 2023
+    },
+    {
+      "County": "CS",
+      "Score": 708.45,
+      "Year": 2023
+    },
+    {
+      "County": "CT",
+      "Score": 644.66,
+      "Year": 2023
+    },
+    {
+      "County": "CV",
+      "Score": 771.0,
+      "Year": 2023
+    },
+    {
+      "County": "DB",
+      "Score": 700.32,
+      "Year": 2023
+    },
+    {
+      "County": "DJ",
+      "Score": 635.29,
+      "Year": 2023
+    },
+    {
+      "County": "GJ",
+      "Score": 683.53,
+      "Year": 2023
+    },
+    {
+      "County": "GL",
+      "Score": 605.28,
+      "Year": 2023
+    },
+    {
+      "County": "GR",
+      "Score": 650.5,
+      "Year": 2023
+    },
+    {
+      "County": "HD",
+      "Score": 664.89,
+      "Year": 2023
+    },
+    {
+      "County": "HR",
+      "Score": 678.58,
+      "Year": 2023
+    },
+    {
+      "County": "IF",
+      "Score": 638.85,
+      "Year": 2023
+    },
+    {
+      "County": "IL",
+      "Score": 697.67,
+      "Year": 2023
+    },
+    {
+      "County": "IS",
+      "Score": 666.25,
+      "Year": 2023
+    },
+    {
+      "County": "MA",
+      "Score": 708.75,
+      "Year": 2023
+    },
+    {
+      "County": "MAI",
+      "Score": 688.38,
+      "Year": 2023
+    },
+    {
+      "County": "ME",
+      "Score": 615.11,
+      "Year": 2023
+    },
+    {
+      "County": "MH",
+      "Score": 636.15,
+      "Year": 2023
+    },
+    {
+      "County": "MJ",
+      "Score": 565.5,
+      "Year": 2023
+    },
+    {
+      "County": "MM",
+      "Score": 655.74,
+      "Year": 2023
+    },
+    {
+      "County": "MS",
+      "Score": 659.59,
+      "Year": 2023
+    },
+    {
+      "County": "NT",
+      "Score": 700.11,
+      "Year": 2023
+    },
+    {
+      "County": "OT",
+      "Score": 703.07,
+      "Year": 2023
+    },
+    {
+      "County": "PH",
+      "Score": 674.69,
+      "Year": 2023
+    },
+    {
+      "County": "SB",
+      "Score": 644.69,
+      "Year": 2023
+    },
+    {
+      "County": "SJ",
+      "Score": 715.86,
+      "Year": 2023
+    },
+    {
+      "County": "SM",
+      "Score": 665.64,
+      "Year": 2023
+    },
+    {
+      "County": "SV",
+      "Score": 670.83,
+      "Year": 2023
+    },
+    {
+      "County": "TL",
+      "Score": 638.83,
+      "Year": 2023
+    },
+    {
+      "County": "TM",
+      "Score": 646.24,
+      "Year": 2023
+    },
+    {
+      "County": "TR",
+      "Score": 693.4,
+      "Year": 2023
+    },
+    {
+      "County": "VL",
+      "Score": 704.9,
+      "Year": 2023
+    },
+    {
+      "County": "VN",
+      "Score": 647.62,
+      "Year": 2023
+    },
+    {
+      "County": "VS",
+      "Score": 666.73,
+      "Year": 2023
+    },
+    {
+      "County": "AB",
+      "Score": 729.5,
+      "Year": 2024
+    },
+    {
+      "County": "AG",
+      "Score": 713.8,
+      "Year": 2024
+    },
+    {
+      "County": "AR",
+      "Score": 577.31,
+      "Year": 2024
+    },
+    {
+      "County": "B",
+      "Score": 680.87,
+      "Year": 2024
+    },
+    {
+      "County": "BC",
+      "Score": 692.47,
+      "Year": 2024
+    },
+    {
+      "County": "BH",
+      "Score": 646.29,
+      "Year": 2024
+    },
+    {
+      "County": "BN",
+      "Score": 683.46,
+      "Year": 2024
+    },
+    {
+      "County": "BR",
+      "Score": 585.03,
+      "Year": 2024
+    },
+    {
+      "County": "BT",
+      "Score": 673.15,
+      "Year": 2024
+    },
+    {
+      "County": "BV",
+      "Score": 659.44,
+      "Year": 2024
+    },
+    {
+      "County": "BZ",
+      "Score": 724.3,
+      "Year": 2024
+    },
+    {
+      "County": "CJ",
+      "Score": 722.7,
+      "Year": 2024
+    },
+    {
+      "County": "CL",
+      "Score": 618.67,
+      "Year": 2024
+    },
+    {
+      "County": "CS",
+      "Score": 639.8,
+      "Year": 2024
+    },
+    {
+      "County": "CT",
+      "Score": 640.54,
+      "Year": 2024
+    },
+    {
+      "County": "CV",
+      "Score": 646.5,
+      "Year": 2024
+    },
+    {
+      "County": "DB",
+      "Score": 700.5,
+      "Year": 2024
+    },
+    {
+      "County": "DJ",
+      "Score": 646.32,
+      "Year": 2024
+    },
+    {
+      "County": "GJ",
+      "Score": 670.46,
+      "Year": 2024
+    },
+    {
+      "County": "GL",
+      "Score": 595.31,
+      "Year": 2024
+    },
+    {
+      "County": "GR",
+      "Score": 808.0,
+      "Year": 2024
+    },
+    {
+      "County": "HD",
+      "Score": 658.28,
+      "Year": 2024
+    },
+    {
+      "County": "HR",
+      "Score": 686.11,
+      "Year": 2024
+    },
+    {
+      "County": "IF",
+      "Score": 714.77,
+      "Year": 2024
+    },
+    {
+      "County": "IL",
+      "Score": 729.75,
+      "Year": 2024
+    },
+    {
+      "County": "IS",
+      "Score": 676.25,
+      "Year": 2024
+    },
+    {
+      "County": "MA",
+      "Score": 715.52,
+      "Year": 2024
+    },
+    {
+      "County": "MAI",
+      "Score": 684.56,
+      "Year": 2024
+    },
+    {
+      "County": "ME",
+      "Score": 577.44,
+      "Year": 2024
+    },
+    {
+      "County": "MH",
+      "Score": 647.35,
+      "Year": 2024
+    },
+    {
+      "County": "MJ",
+      "Score": 660.2,
+      "Year": 2024
+    },
+    {
+      "County": "MM",
+      "Score": 690.43,
+      "Year": 2024
+    },
+    {
+      "County": "MS",
+      "Score": 672.3,
+      "Year": 2024
+    },
+    {
+      "County": "NT",
+      "Score": 755.31,
+      "Year": 2024
+    },
+    {
+      "County": "OT",
+      "Score": 659.43,
+      "Year": 2024
+    },
+    {
+      "County": "PH",
+      "Score": 669.06,
+      "Year": 2024
+    },
+    {
+      "County": "SB",
+      "Score": 657.3,
+      "Year": 2024
+    },
+    {
+      "County": "SJ",
+      "Score": 693.85,
+      "Year": 2024
+    },
+    {
+      "County": "SM",
+      "Score": 666.5,
+      "Year": 2024
+    },
+    {
+      "County": "SV",
+      "Score": 648.7,
+      "Year": 2024
+    },
+    {
+      "County": "TL",
+      "Score": 654.88,
+      "Year": 2024
+    },
+    {
+      "County": "TM",
+      "Score": 656.39,
+      "Year": 2024
+    },
+    {
+      "County": "TR",
+      "Score": 729.4,
+      "Year": 2024
+    },
+    {
+      "County": "VL",
+      "Score": 639.5,
+      "Year": 2024
+    },
+    {
+      "County": "VN",
+      "Score": 710.25,
+      "Year": 2024
+    },
+    {
+      "County": "VS",
+      "Score": 738.71,
+      "Year": 2024
+    },
+    {
+      "County": "AB",
+      "Score": 707.04,
+      "Year": 2025
+    },
+    {
+      "County": "AG",
+      "Score": 699.96,
+      "Year": 2025
+    },
+    {
+      "County": "AR",
+      "Score": 576.28,
+      "Year": 2025
+    },
+    {
+      "County": "B",
+      "Score": 689.09,
+      "Year": 2025
+    },
+    {
+      "County": "BC",
+      "Score": 715.83,
+      "Year": 2025
+    },
+    {
+      "County": "BH",
+      "Score": 630.22,
+      "Year": 2025
+    },
+    {
+      "County": "BN",
+      "Score": 701.46,
+      "Year": 2025
+    },
+    {
+      "County": "BR",
+      "Score": 645.87,
+      "Year": 2025
+    },
+    {
+      "County": "BT",
+      "Score": 691.04,
+      "Year": 2025
+    },
+    {
+      "County": "BV",
+      "Score": 660.4,
+      "Year": 2025
+    },
+    {
+      "County": "BZ",
+      "Score": 736.13,
+      "Year": 2025
+    },
+    {
+      "County": "CJ",
+      "Score": 726.12,
+      "Year": 2025
+    },
+    {
+      "County": "CL",
+      "Score": 669.93,
+      "Year": 2025
+    },
+    {
+      "County": "CS",
+      "Score": 670.4,
+      "Year": 2025
+    },
+    {
+      "County": "CT",
+      "Score": 646.31,
+      "Year": 2025
+    },
+    {
+      "County": "CV",
+      "Score": 650.05,
+      "Year": 2025
+    },
+    {
+      "County": "DB",
+      "Score": 687.5,
+      "Year": 2025
+    },
+    {
+      "County": "DJ",
+      "Score": 643.64,
+      "Year": 2025
+    },
+    {
+      "County": "GJ",
+      "Score": 674.02,
+      "Year": 2025
+    },
+    {
+      "County": "GL",
+      "Score": 606.65,
+      "Year": 2025
+    },
+    {
+      "County": "GR",
+      "Score": 749.0,
+      "Year": 2025
+    },
+    {
+      "County": "HD",
+      "Score": 635.61,
+      "Year": 2025
+    },
+    {
+      "County": "HR",
+      "Score": 670.04,
+      "Year": 2025
+    },
+    {
+      "County": "IF",
+      "Score": 682.21,
+      "Year": 2025
+    },
+    {
+      "County": "IL",
+      "Score": 711.0,
+      "Year": 2025
+    },
+    {
+      "County": "IS",
+      "Score": 678.93,
+      "Year": 2025
+    },
+    {
+      "County": "MA",
+      "Score": 724.22,
+      "Year": 2025
+    },
+    {
+      "County": "MAI",
+      "Score": 691.94,
+      "Year": 2025
+    },
+    {
+      "County": "ME",
+      "Score": 627.75,
+      "Year": 2025
+    },
+    {
+      "County": "MH",
+      "Score": 642.0,
+      "Year": 2025
+    },
+    {
+      "County": "MJ",
+      "Score": 609.5,
+      "Year": 2025
+    },
+    {
+      "County": "MM",
+      "Score": 669.4,
+      "Year": 2025
+    },
+    {
+      "County": "MS",
+      "Score": 672.85,
+      "Year": 2025
+    },
+    {
+      "County": "NT",
+      "Score": 741.93,
+      "Year": 2025
+    },
+    {
+      "County": "OT",
+      "Score": 682.97,
+      "Year": 2025
+    },
+    {
+      "County": "PH",
+      "Score": 693.93,
+      "Year": 2025
+    },
+    {
+      "County": "SB",
+      "Score": 655.2,
+      "Year": 2025
+    },
+    {
+      "County": "SJ",
+      "Score": 670.67,
+      "Year": 2025
+    },
+    {
+      "County": "SM",
+      "Score": 702.95,
+      "Year": 2025
+    },
+    {
+      "County": "SV",
+      "Score": 702.56,
+      "Year": 2025
+    },
+    {
+      "County": "TL",
+      "Score": 657.23,
+      "Year": 2025
+    },
+    {
+      "County": "TM",
+      "Score": 650.91,
+      "Year": 2025
+    },
+    {
+      "County": "TR",
+      "Score": 710.0,
+      "Year": 2025
+    },
+    {
+      "County": "VL",
+      "Score": 752.05,
+      "Year": 2025
+    },
+    {
+      "County": "VN",
+      "Score": 660.46,
+      "Year": 2025
+    },
+    {
+      "County": "VS",
+      "Score": 712.81,
+      "Year": 2025
+    }
+  ],
+  "counts": [
+    {
+      "County": "AB",
+      "Count": 19,
+      "Year": 2023
+    },
+    {
+      "County": "AG",
+      "Count": 39,
+      "Year": 2023
+    },
+    {
+      "County": "AR",
+      "Count": 141,
+      "Year": 2023
+    },
+    {
+      "County": "B",
+      "Count": 1370,
+      "Year": 2023
+    },
+    {
+      "County": "BC",
+      "Count": 21,
+      "Year": 2023
+    },
+    {
+      "County": "BH",
+      "Count": 217,
+      "Year": 2023
+    },
+    {
+      "County": "BN",
+      "Count": 18,
+      "Year": 2023
+    },
+    {
+      "County": "BR",
+      "Count": 31,
+      "Year": 2023
+    },
+    {
+      "County": "BT",
+      "Count": 23,
+      "Year": 2023
+    },
+    {
+      "County": "BV",
+      "Count": 130,
+      "Year": 2023
+    },
+    {
+      "County": "BZ",
+      "Count": 29,
+      "Year": 2023
+    },
+    {
+      "County": "CJ",
+      "Count": 427,
+      "Year": 2023
+    },
+    {
+      "County": "CL",
+      "Count": 9,
+      "Year": 2023
+    },
+    {
+      "County": "CS",
+      "Count": 20,
+      "Year": 2023
+    },
+    {
+      "County": "CT",
+      "Count": 234,
+      "Year": 2023
+    },
+    {
+      "County": "CV",
+      "Count": 7,
+      "Year": 2023
+    },
+    {
+      "County": "DB",
+      "Count": 25,
+      "Year": 2023
+    },
+    {
+      "County": "DJ",
+      "Count": 483,
+      "Year": 2023
+    },
+    {
+      "County": "GJ",
+      "Count": 47,
+      "Year": 2023
+    },
+    {
+      "County": "GL",
+      "Count": 135,
+      "Year": 2023
+    },
+    {
+      "County": "GR",
+      "Count": 4,
+      "Year": 2023
+    },
+    {
+      "County": "HD",
+      "Count": 47,
+      "Year": 2023
+    },
+    {
+      "County": "HR",
+      "Count": 19,
+      "Year": 2023
+    },
+    {
+      "County": "IF",
+      "Count": 26,
+      "Year": 2023
+    },
+    {
+      "County": "IL",
+      "Count": 6,
+      "Year": 2023
+    },
+    {
+      "County": "IS",
+      "Count": 828,
+      "Year": 2023
+    },
+    {
+      "County": "MA",
+      "Count": 48,
+      "Year": 2023
+    },
+    {
+      "County": "MAI",
+      "Count": 8,
+      "Year": 2023
+    },
+    {
+      "County": "ME",
+      "Count": 9,
+      "Year": 2023
+    },
+    {
+      "County": "MH",
+      "Count": 20,
+      "Year": 2023
+    },
+    {
+      "County": "MJ",
+      "Count": 2,
+      "Year": 2023
+    },
+    {
+      "County": "MM",
+      "Count": 43,
+      "Year": 2023
+    },
+    {
+      "County": "MS",
+      "Count": 307,
+      "Year": 2023
+    },
+    {
+      "County": "NT",
+      "Count": 19,
+      "Year": 2023
+    },
+    {
+      "County": "OT",
+      "Count": 27,
+      "Year": 2023
+    },
+    {
+      "County": "PH",
+      "Count": 29,
+      "Year": 2023
+    },
+    {
+      "County": "SB",
+      "Count": 128,
+      "Year": 2023
+    },
+    {
+      "County": "SJ",
+      "Count": 22,
+      "Year": 2023
+    },
+    {
+      "County": "SM",
+      "Count": 28,
+      "Year": 2023
+    },
+    {
+      "County": "SV",
+      "Count": 23,
+      "Year": 2023
+    },
+    {
+      "County": "TL",
+      "Count": 6,
+      "Year": 2023
+    },
+    {
+      "County": "TM",
+      "Count": 504,
+      "Year": 2023
+    },
+    {
+      "County": "TR",
+      "Count": 10,
+      "Year": 2023
+    },
+    {
+      "County": "VL",
+      "Count": 21,
+      "Year": 2023
+    },
+    {
+      "County": "VN",
+      "Count": 16,
+      "Year": 2023
+    },
+    {
+      "County": "VS",
+      "Count": 11,
+      "Year": 2023
+    },
+    {
+      "County": "AB",
+      "Count": 18,
+      "Year": 2024
+    },
+    {
+      "County": "AG",
+      "Count": 41,
+      "Year": 2024
+    },
+    {
+      "County": "AR",
+      "Count": 135,
+      "Year": 2024
+    },
+    {
+      "County": "B",
+      "Count": 1512,
+      "Year": 2024
+    },
+    {
+      "County": "BC",
+      "Count": 32,
+      "Year": 2024
+    },
+    {
+      "County": "BH",
+      "Count": 262,
+      "Year": 2024
+    },
+    {
+      "County": "BN",
+      "Count": 28,
+      "Year": 2024
+    },
+    {
+      "County": "BR",
+      "Count": 29,
+      "Year": 2024
+    },
+    {
+      "County": "BT",
+      "Count": 20,
+      "Year": 2024
+    },
+    {
+      "County": "BV",
+      "Count": 157,
+      "Year": 2024
+    },
+    {
+      "County": "BZ",
+      "Count": 27,
+      "Year": 2024
+    },
+    {
+      "County": "CJ",
+      "Count": 454,
+      "Year": 2024
+    },
+    {
+      "County": "CL",
+      "Count": 3,
+      "Year": 2024
+    },
+    {
+      "County": "CS",
+      "Count": 15,
+      "Year": 2024
+    },
+    {
+      "County": "CT",
+      "Count": 238,
+      "Year": 2024
+    },
+    {
+      "County": "CV",
+      "Count": 6,
+      "Year": 2024
+    },
+    {
+      "County": "DB",
+      "Count": 20,
+      "Year": 2024
+    },
+    {
+      "County": "DJ",
+      "Count": 518,
+      "Year": 2024
+    },
+    {
+      "County": "GJ",
+      "Count": 59,
+      "Year": 2024
+    },
+    {
+      "County": "GL",
+      "Count": 150,
+      "Year": 2024
+    },
+    {
+      "County": "GR",
+      "Count": 2,
+      "Year": 2024
+    },
+    {
+      "County": "HD",
+      "Count": 39,
+      "Year": 2024
+    },
+    {
+      "County": "HR",
+      "Count": 27,
+      "Year": 2024
+    },
+    {
+      "County": "IF",
+      "Count": 61,
+      "Year": 2024
+    },
+    {
+      "County": "IL",
+      "Count": 4,
+      "Year": 2024
+    },
+    {
+      "County": "IS",
+      "Count": 793,
+      "Year": 2024
+    },
+    {
+      "County": "MA",
+      "Count": 132,
+      "Year": 2024
+    },
+    {
+      "County": "MAI",
+      "Count": 9,
+      "Year": 2024
+    },
+    {
+      "County": "ME",
+      "Count": 9,
+      "Year": 2024
+    },
+    {
+      "County": "MH",
+      "Count": 17,
+      "Year": 2024
+    },
+    {
+      "County": "MJ",
+      "Count": 5,
+      "Year": 2024
+    },
+    {
+      "County": "MM",
+      "Count": 47,
+      "Year": 2024
+    },
+    {
+      "County": "MS",
+      "Count": 328,
+      "Year": 2024
+    },
+    {
+      "County": "NT",
+      "Count": 16,
+      "Year": 2024
+    },
+    {
+      "County": "OT",
+      "Count": 14,
+      "Year": 2024
+    },
+    {
+      "County": "PH",
+      "Count": 36,
+      "Year": 2024
+    },
+    {
+      "County": "SB",
+      "Count": 115,
+      "Year": 2024
+    },
+    {
+      "County": "SJ",
+      "Count": 20,
+      "Year": 2024
+    },
+    {
+      "County": "SM",
+      "Count": 36,
+      "Year": 2024
+    },
+    {
+      "County": "SV",
+      "Count": 43,
+      "Year": 2024
+    },
+    {
+      "County": "TL",
+      "Count": 8,
+      "Year": 2024
+    },
+    {
+      "County": "TM",
+      "Count": 578,
+      "Year": 2024
+    },
+    {
+      "County": "TR",
+      "Count": 10,
+      "Year": 2024
+    },
+    {
+      "County": "VL",
+      "Count": 22,
+      "Year": 2024
+    },
+    {
+      "County": "VN",
+      "Count": 20,
+      "Year": 2024
+    },
+    {
+      "County": "VS",
+      "Count": 14,
+      "Year": 2024
+    },
+    {
+      "County": "AB",
+      "Count": 27,
+      "Year": 2025
+    },
+    {
+      "County": "AG",
+      "Count": 67,
+      "Year": 2025
+    },
+    {
+      "County": "AR",
+      "Count": 152,
+      "Year": 2025
+    },
+    {
+      "County": "B",
+      "Count": 1703,
+      "Year": 2025
+    },
+    {
+      "County": "BC",
+      "Count": 47,
+      "Year": 2025
+    },
+    {
+      "County": "BH",
+      "Count": 299,
+      "Year": 2025
+    },
+    {
+      "County": "BN",
+      "Count": 24,
+      "Year": 2025
+    },
+    {
+      "County": "BR",
+      "Count": 53,
+      "Year": 2025
+    },
+    {
+      "County": "BT",
+      "Count": 26,
+      "Year": 2025
+    },
+    {
+      "County": "BV",
+      "Count": 193,
+      "Year": 2025
+    },
+    {
+      "County": "BZ",
+      "Count": 30,
+      "Year": 2025
+    },
+    {
+      "County": "CJ",
+      "Count": 428,
+      "Year": 2025
+    },
+    {
+      "County": "CL",
+      "Count": 14,
+      "Year": 2025
+    },
+    {
+      "County": "CS",
+      "Count": 20,
+      "Year": 2025
+    },
+    {
+      "County": "CT",
+      "Count": 260,
+      "Year": 2025
+    },
+    {
+      "County": "CV",
+      "Count": 19,
+      "Year": 2025
+    },
+    {
+      "County": "DB",
+      "Count": 16,
+      "Year": 2025
+    },
+    {
+      "County": "DJ",
+      "Count": 614,
+      "Year": 2025
+    },
+    {
+      "County": "GJ",
+      "Count": 52,
+      "Year": 2025
+    },
+    {
+      "County": "GL",
+      "Count": 211,
+      "Year": 2025
+    },
+    {
+      "County": "GR",
+      "Count": 1,
+      "Year": 2025
+    },
+    {
+      "County": "HD",
+      "Count": 46,
+      "Year": 2025
+    },
+    {
+      "County": "HR",
+      "Count": 24,
+      "Year": 2025
+    },
+    {
+      "County": "IF",
+      "Count": 62,
+      "Year": 2025
+    },
+    {
+      "County": "IL",
+      "Count": 1,
+      "Year": 2025
+    },
+    {
+      "County": "IS",
+      "Count": 780,
+      "Year": 2025
+    },
+    {
+      "County": "MA",
+      "Count": 108,
+      "Year": 2025
+    },
+    {
+      "County": "MAI",
+      "Count": 16,
+      "Year": 2025
+    },
+    {
+      "County": "ME",
+      "Count": 8,
+      "Year": 2025
+    },
+    {
+      "County": "MH",
+      "Count": 19,
+      "Year": 2025
+    },
+    {
+      "County": "MJ",
+      "Count": 2,
+      "Year": 2025
+    },
+    {
+      "County": "MM",
+      "Count": 35,
+      "Year": 2025
+    },
+    {
+      "County": "MS",
+      "Count": 360,
+      "Year": 2025
+    },
+    {
+      "County": "NT",
+      "Count": 29,
+      "Year": 2025
+    },
+    {
+      "County": "OT",
+      "Count": 29,
+      "Year": 2025
+    },
+    {
+      "County": "PH",
+      "Count": 44,
+      "Year": 2025
+    },
+    {
+      "County": "SB",
+      "Count": 153,
+      "Year": 2025
+    },
+    {
+      "County": "SJ",
+      "Count": 15,
+      "Year": 2025
+    },
+    {
+      "County": "SM",
+      "Count": 22,
+      "Year": 2025
+    },
+    {
+      "County": "SV",
+      "Count": 52,
+      "Year": 2025
+    },
+    {
+      "County": "TL",
+      "Count": 13,
+      "Year": 2025
+    },
+    {
+      "County": "TM",
+      "Count": 681,
+      "Year": 2025
+    },
+    {
+      "County": "TR",
+      "Count": 16,
+      "Year": 2025
+    },
+    {
+      "County": "VL",
+      "Count": 21,
+      "Year": 2025
+    },
+    {
+      "County": "VN",
+      "Count": 24,
+      "Year": 2025
+    },
+    {
+      "County": "VS",
+      "Count": 16,
+      "Year": 2025
+    }
+  ],
+  "distribution": [
+    {
+      "Range": "250-299",
+      "Count": 1,
+      "Year": 2023
+    },
+    {
+      "Range": "300-349",
+      "Count": 3,
+      "Year": 2023
+    },
+    {
+      "Range": "350-399",
+      "Count": 8,
+      "Year": 2023
+    },
+    {
+      "Range": "400-449",
+      "Count": 30,
+      "Year": 2023
+    },
+    {
+      "Range": "450-499",
+      "Count": 301,
+      "Year": 2023
+    },
+    {
+      "Range": "500-549",
+      "Count": 663,
+      "Year": 2023
+    },
+    {
+      "Range": "550-599",
+      "Count": 799,
+      "Year": 2023
+    },
+    {
+      "Range": "600-649",
+      "Count": 829,
+      "Year": 2023
+    },
+    {
+      "Range": "650-699",
+      "Count": 818,
+      "Year": 2023
+    },
+    {
+      "Range": "700-749",
+      "Count": 810,
+      "Year": 2023
+    },
+    {
+      "Range": "750-799",
+      "Count": 629,
+      "Year": 2023
+    },
+    {
+      "Range": "800-849",
+      "Count": 424,
+      "Year": 2023
+    },
+    {
+      "Range": "850-899",
+      "Count": 279,
+      "Year": 2023
+    },
+    {
+      "Range": "900-949",
+      "Count": 42,
+      "Year": 2023
+    },
+    {
+      "Range": "0-49",
+      "Count": 1,
+      "Year": 2024
+    },
+    {
+      "Range": "200-249",
+      "Count": 1,
+      "Year": 2024
+    },
+    {
+      "Range": "250-299",
+      "Count": 3,
+      "Year": 2024
+    },
+    {
+      "Range": "300-349",
+      "Count": 1,
+      "Year": 2024
+    },
+    {
+      "Range": "350-399",
+      "Count": 7,
+      "Year": 2024
+    },
+    {
+      "Range": "400-449",
+      "Count": 65,
+      "Year": 2024
+    },
+    {
+      "Range": "450-499",
+      "Count": 331,
+      "Year": 2024
+    },
+    {
+      "Range": "500-549",
+      "Count": 711,
+      "Year": 2024
+    },
+    {
+      "Range": "550-599",
+      "Count": 899,
+      "Year": 2024
+    },
+    {
+      "Range": "600-649",
+      "Count": 803,
+      "Year": 2024
+    },
+    {
+      "Range": "650-699",
+      "Count": 812,
+      "Year": 2024
+    },
+    {
+      "Range": "700-749",
+      "Count": 731,
+      "Year": 2024
+    },
+    {
+      "Range": "750-799",
+      "Count": 669,
+      "Year": 2024
+    },
+    {
+      "Range": "800-849",
+      "Count": 606,
+      "Year": 2024
+    },
+    {
+      "Range": "850-899",
+      "Count": 418,
+      "Year": 2024
+    },
+    {
+      "Range": "900-949",
+      "Count": 71,
+      "Year": 2024
+    },
+    {
+      "Range": "100-149",
+      "Count": 1,
+      "Year": 2025
+    },
+    {
+      "Range": "200-249",
+      "Count": 2,
+      "Year": 2025
+    },
+    {
+      "Range": "300-349",
+      "Count": 1,
+      "Year": 2025
+    },
+    {
+      "Range": "350-399",
+      "Count": 6,
+      "Year": 2025
+    },
+    {
+      "Range": "400-449",
+      "Count": 57,
+      "Year": 2025
+    },
+    {
+      "Range": "450-499",
+      "Count": 368,
+      "Year": 2025
+    },
+    {
+      "Range": "500-549",
+      "Count": 884,
+      "Year": 2025
+    },
+    {
+      "Range": "550-599",
+      "Count": 973,
+      "Year": 2025
+    },
+    {
+      "Range": "600-649",
+      "Count": 925,
+      "Year": 2025
+    },
+    {
+      "Range": "650-699",
+      "Count": 794,
+      "Year": 2025
+    },
+    {
+      "Range": "700-749",
+      "Count": 811,
+      "Year": 2025
+    },
+    {
+      "Range": "750-799",
+      "Count": 737,
+      "Year": 2025
+    },
+    {
+      "Range": "800-849",
+      "Count": 664,
+      "Year": 2025
+    },
+    {
+      "Range": "850-899",
+      "Count": 471,
+      "Year": 2025
+    },
+    {
+      "Range": "900-949",
+      "Count": 138,
+      "Year": 2025
+    }
+  ]
+}
